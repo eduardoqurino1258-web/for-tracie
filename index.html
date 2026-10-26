@@ -212,8 +212,17 @@ footer{text-align:center;padding:25px 10px 40px;color:#5d85b3;font-size:.85rem}
 function showAnswer(yes){
   const answer=document.getElementById("answer");
   answer.style.display="block";
-  if(yes){
-    answer.innerHTML="<h2 style='font-size:1.8rem'>WAIT REALLY? ♡</h2><p>This just made me so happy. I can’t wait to see where this goes with you.</p><div style='font-size:1.8rem'>♡ ♪ ♡</div>";
+if(yes){
+  answer.innerHTML = `
+    <h2 style="font-size:2rem">WAIT REALLY?! 🩵</h2>
+    <p>You just made me the happiest person ever</p>
+    <p>I'm so glad it's you Tracie ♡</p>
+    <div style="font-size:2rem">♡ ✿ ♡ ♪ ♡</div>
+    <p>Here's to us and all the memories we're gonna make</p>
+  `;
+  answer.style.display = "block";
+  answer.scrollIntoView({behavior:"smooth",block:"center"});
+}
   }else{
     answer.innerHTML="<p>That’s okay, Tracie. Thank you for being honest with me. I still think you’re really special, and I respect how you feel. ♡</p>";
   }
