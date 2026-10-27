@@ -5,114 +5,414 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Tracie ♡</title>
+
 <style>
 :root {
   --blue:#4d83c6;
   --deep:#244d83;
   --ink:#29496e;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
-  margin:0;color:var(--ink);
+  margin:0;
+  color:var(--ink);
   font-family:"Trebuchet MS","Segoe UI",sans-serif;
   background:linear-gradient(180deg,#eaf5ff,#cfe5ff 48%,#f4f9ff);
   overflow-x:hidden;
 }
+
 .flower-rail{
-  position:fixed;top:0;bottom:0;width:clamp(62px,10vw,125px);
-  z-index:3;pointer-events:none;display:flex;
-  flex-direction:column;justify-content:space-around;
-  align-items:center;opacity:.92;
+  position:fixed;
+  top:0;
+  bottom:0;
+  width:clamp(62px,10vw,125px);
+  z-index:3;
+  pointer-events:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  opacity:.92;
 }
+
 .left{left:0}
 .right{right:0;transform:scaleX(-1)}
+
 .lily{
-  width:100%;max-width:115px;
+  width:100%;
+  max-width:115px;
   filter:drop-shadow(0 6px 7px #7ca8d333);
   animation:sway 4s ease-in-out infinite;
 }
-.lily:nth-child(even){width:78%;animation-delay:-2s}
-main{width:min(850px,100%);margin:auto;padding:0 76px}
-nav{
-  position:relative;z-index:4;display:flex;justify-content:center;
-  gap:18px;padding:24px 8px 12px;flex-wrap:wrap;font-size:.9rem
+
+.lily:nth-child(even){
+  width:78%;
+  animation-delay:-2s;
 }
+
+main{
+  width:min(850px,100%);
+  margin:auto;
+  padding:0 76px;
+}
+
+nav{
+  position:relative;
+  z-index:4;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  padding:24px 8px 12px;
+  flex-wrap:wrap;
+  font-size:.9rem;
+}
+
 nav a,.scroll{color:#376da8}
 nav a{text-decoration:none}
 nav a:hover{text-decoration:underline}
+
 section{
-  min-height:82vh;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;padding:50px 0
+  min-height:82vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:50px 0;
 }
+
 .eyebrow{
-  letter-spacing:.14em;text-transform:uppercase;
-  font-size:.75rem;color:#5b8bc2
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.75rem;
+  color:#5b8bc2;
 }
+
 h1{
-  font-size:clamp(3.2rem,9vw,6.2rem);line-height:1;
-  margin:18px 0;color:#3975b9;font-weight:600;font-family:Georgia,serif
+  font-size:clamp(3.2rem,9vw,6.2rem);
+  line-height:1;
+  margin:18px 0;
+  color:#3975b9;
+  font-weight:600;
+  font-family:Georgia,serif;
 }
-h2{font-family:Georgia,serif;color:var(--deep);font-size:clamp(2rem,5vw,3rem);margin:0 0 18px}
-p{line-height:1.8;font-size:1.03rem;max-width:570px}
+
+h2{
+  font-family:Georgia,serif;
+  color:var(--deep);
+  font-size:clamp(2rem,5vw,3rem);
+  margin:0 0 18px;
+}
+
+p{
+  line-height:1.8;
+  font-size:1.03rem;
+  max-width:570px;
+}
+
 .card{
-  background:#ffffffc9;border:1px solid white;border-radius:26px;
-  padding:clamp(22px,5vw,42px);width:100%;
-  box-shadow:0 16px 50px #4b83bd1b;backdrop-filter:blur(8px)
+  background:#ffffffc9;
+  border:1px solid white;
+  border-radius:26px;
+  padding:clamp(22px,5vw,42px);
+  width:100%;
+  box-shadow:0 16px 50px #4b83bd1b;
+  backdrop-filter:blur(8px);
 }
+
 .heart{
-  color:#6b9ed8;font-size:1.8rem;margin:8px 0;
-  animation:pulse 2s ease-in-out infinite
+  color:#6b9ed8;
+  font-size:1.8rem;
+  margin:8px 0;
+  animation:pulse 2s ease-in-out infinite;
 }
+
 .likes{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;width:100%;margin-top:22px
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+  margin-top:22px;
 }
+
 .like{
-  background:#f8fbff;border:1px solid #d4e7fb;
-  border-radius:18px;padding:17px 10px;
-  transition:transform .25s,box-shadow .25s
+  background:#f8fbff;
+  border:1px solid #d4e7fb;
+  border-radius:18px;
+  padding:17px 10px;
+  transition:transform .25s,box-shadow .25s;
 }
-.like:hover{transform:translateY(-5px);box-shadow:0 10px 22px #4b83bd22}
-.like span{display:block;font-size:1.7rem;margin-bottom:7px}
-.like strong{font-weight:600;color:#376da8}
+
+.like:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 22px #4b83bd22;
+}
+
+.like span{
+  display:block;
+  font-size:1.7rem;
+  margin-bottom:7px;
+}
+
+.like strong{
+  font-weight:600;
+  color:#376da8;
+}
+
 .hero{position:relative}
-.cat{font-size:2rem;margin-top:18px;animation:bounce 2.6s ease-in-out infinite}
-.floaties{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+
+.cat{
+  font-size:2rem;
+  margin-top:18px;
+  animation:bounce 2.6s ease-in-out infinite;
+}
+
+.floaties{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
 .floaties span{
-  position:absolute;color:#78a9e1;opacity:.65;
-  animation:drift 5s ease-in-out infinite,twinkle 2.4s infinite
+  position:absolute;
+  color:#78a9e1;
+  opacity:.65;
+  animation:drift 5s ease-in-out infinite,twinkle 2.4s infinite;
 }
-.floaties span:nth-child(1){top:20%;left:18%;font-size:1.7rem}
-.floaties span:nth-child(2){top:35%;right:15%;animation-delay:-2s}
-.floaties span:nth-child(3){bottom:25%;left:24%;animation-delay:-4s}
-.floaties span:nth-child(4){bottom:18%;right:22%;font-size:1.8rem}
-.page-sparkles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+
+.floaties span:nth-child(1){
+  top:20%;
+  left:18%;
+  font-size:1.7rem;
+}
+
+.floaties span:nth-child(2){
+  top:35%;
+  right:15%;
+  animation-delay:-2s;
+}
+
+.floaties span:nth-child(3){
+  bottom:25%;
+  left:24%;
+  animation-delay:-4s;
+}
+
+.floaties span:nth-child(4){
+  bottom:18%;
+  right:22%;
+  font-size:1.8rem;
+}
+
+.page-sparkles{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:1;
+}
+
 .page-sparkles span{
-  position:absolute;bottom:-35px;color:#6c9ed6;opacity:0;
-  animation:rise 12s linear infinite;font-size:1.4rem
+  position:absolute;
+  bottom:-35px;
+  color:#6c9ed6;
+  opacity:0;
+  animation:rise 12s linear infinite;
+  font-size:1.4rem;
 }
+
 .page-sparkles span:nth-child(1){left:18%}
 .page-sparkles span:nth-child(2){left:38%;animation-delay:3s}
 .page-sparkles span:nth-child(3){left:62%;animation-delay:6s}
 .page-sparkles span:nth-child(4){left:78%;animation-delay:8s}
 .page-sparkles span:nth-child(5){left:88%;animation-delay:10s}
-.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:24px}
-button{
-  border:0;border-radius:999px;padding:14px 32px;font-size:1rem;
-  cursor:pointer;transition:transform .18s,box-shadow .18s;font-weight:700
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:24px;
 }
-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px #3f77b933}
+
+button{
+  border:0;
+  border-radius:999px;
+  padding:14px 32px;
+  font-size:1rem;
+  cursor:pointer;
+  transition:transform .18s,box-shadow .18s;
+  font-weight:700;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px #3f77b933;
+}
+
 .yes{background:#4d8bd0;color:white}
-.no{background:white;color:#426d9d;border:1px solid #bfd9f5}
-#answer{display:none;margin-top:25px;padding:20px;border-radius:18px;background:#f5faff}
-footer{text-align:center;padding:25px 10px 40px;color:#5d85b3;font-size:.85rem}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
-@keyframes drift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-16px) rotate(8deg)}}
-@keyframes sway{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(4deg) translateY(-5px)}}
-@keyframes twinkle{0%,100%{opacity:.35}50%{opacity:.9}}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:.65}85%{opacity:.55}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+
+.no{
+  background:white;
+  color:#426d9d;
+  border:1px solid #bfd9f5;
+}
+
+#answer{
+  display:none;
+  margin-top:25px;
+  padding:20px;
+  border-radius:18px;
+  background:#f5faff;
+}
+
+footer{
+  text-align:center;
+  padding:25px 10px 40px;
+  color:#5d85b3;
+  font-size:.85rem;
+}
+
+/* Original animations */
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.12)}
+}
+
+@keyframes drift{
+  0%,100%{transform:translateY(0) rotate(-8deg)}
+  50%{transform:translateY(-16px) rotate(8deg)}
+}
+
+@keyframes sway{
+  0%,100%{transform:rotate(-3deg) translateY(0)}
+  50%{transform:rotate(4deg) translateY(-5px)}
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:.35}
+  50%{opacity:.9}
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+
+@keyframes rise{
+  0%{transform:translateY(0);opacity:0}
+  15%{opacity:.65}
+  85%{opacity:.55}
+  100%{transform:translateY(-110vh) rotate(25deg);opacity:0}
+}
+
+/* Added Yes celebration */
+#celebration{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#d9ecff,#a9d2ff 55%,#eaf5ff);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .5s ease,visibility .5s ease;
+}
+
+#celebration.active{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.celebration-card{
+  position:relative;
+  z-index:2;
+  width:min(520px,100%);
+  max-height:90vh;
+  overflow-y:auto;
+  padding:clamp(24px,6vw,42px);
+  text-align:center;
+  background:#ffffffed;
+  border:2px solid white;
+  border-radius:28px;
+  box-shadow:0 20px 70px #3975b933;
+  opacity:0;
+  transform:scale(.65) translateY(30px);
+}
+
+#celebration.active .celebration-card{
+  animation:celebrationPop .8s cubic-bezier(.18,.89,.32,1.28) forwards;
+}
+
+.celebration-heart{
+  font-size:clamp(4.5rem,15vw,7rem);
+  line-height:1.2;
+  animation:celebrationBeat 1s ease-in-out infinite;
+}
+
+.celebration-card h2{
+  font-size:clamp(1.8rem,7vw,2.8rem);
+  margin:12px 0;
+  color:#3975b9;
+}
+
+.celebration-card p{
+  margin:12px auto;
+}
+
+.celebration-name{
+  color:#3975b9;
+  font-family:Georgia,serif;
+  font-size:1.8rem;
+  margin:22px 0;
+}
+
+.close-celebration{
+  background:#4d8bd0;
+  color:white;
+  margin-top:8px;
+}
+
+.falling-item{
+  position:absolute;
+  top:-50px;
+  pointer-events:none;
+  animation:falling linear forwards;
+}
+
+@keyframes celebrationPop{
+  0%{opacity:0;transform:scale(.65) translateY(30px)}
+  75%{opacity:1;transform:scale(1.04) translateY(-5px)}
+  100%{opacity:1;transform:scale(1) translateY(0)}
+}
+
+@keyframes celebrationBeat{
+  0%,100%{transform:scale(1)}
+  25%{transform:scale(1.14)}
+  45%{transform:scale(1)}
+  65%{transform:scale(1.09)}
+}
+
+@keyframes falling{
+  0%{
+    transform:translateY(-5vh) translateX(0) rotate(0deg);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(110vh) translateX(var(--drift)) rotate(720deg);
+    opacity:.15;
+  }
+}
+
 @media(max-width:560px){
   main{padding:0 48px}
   .flower-rail{width:49px;opacity:.72}
@@ -120,11 +420,16 @@ footer{text-align:center;padding:25px 10px 40px;color:#5d85b3;font-size:.85rem}
   section{min-height:76vh}
   p{font-size:.98rem}
 }
+
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;scroll-behavior:auto!important}
+  *,*::before,*::after{
+    animation:none!important;
+    scroll-behavior:auto!important;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <div class="flower-rail left" aria-hidden="true">
@@ -139,86 +444,175 @@ footer{text-align:center;padding:25px 10px 40px;color:#5d85b3;font-size:.85rem}
 <svg class="lily" viewBox="0 0 120 150"><g stroke="#477bb3" stroke-width="1.5" stroke-linejoin="round"><path d="M58 86C10 65 18 28 49 52C43 20 65 13 67 52C95 18 112 48 75 70C102 68 99 94 69 91Z" fill="#fff"/><path d="M58 86C38 60 45 37 56 31C67 50 67 67 58 86Z" fill="#dcecff"/><path d="M59 88Q53 112 34 137" fill="none" stroke="#57986f" stroke-width="5"/></g></svg>
 </div>
 
-<div class="page-sparkles" aria-hidden="true"><span>♡</span><span>✧</span><span>♡</span><span>♪</span><span>♡</span></div>
+<div class="page-sparkles" aria-hidden="true">
+  <span>♡</span><span>✧</span><span>♡</span><span>♪</span><span>♡</span>
+</div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About you</a>
-<a href="#why">Why I like you</a>
-<a href="#question">The question</a>
+  <a href="#home">Home</a>
+  <a href="#about">About you</a>
+  <a href="#why">Why I like you</a>
+  <a href="#question">The question</a>
 </nav>
 
 <main>
 <section id="home" class="hero">
-<div class="floaties" aria-hidden="true"><span>♪</span><span>♡</span><span>♫</span><span>✧</span></div>
-<div class="eyebrow">a little something made just for</div>
-<h1>Tracie ♡</h1>
-<p>Some people make an ordinary day feel a little more special. You're one of those people.</p>
-<div class="heart">♡</div>
-<div class="cat">ฅ^•ﻌ•^ฅ</div>
-<a class="scroll" href="#about">There's more below ↓</a>
+  <div class="floaties" aria-hidden="true">
+    <span>♪</span><span>♡</span><span>♫</span><span>✧</span>
+  </div>
+  <div class="eyebrow">a little something made just for</div>
+  <h1>Tracie ♡</h1>
+  <p>Some people make an ordinary day feel a little more special. You're one of those people.</p>
+  <div class="heart">♡</div>
+  <div class="cat">ฅ^•ﻌ•^ฅ</div>
+  <a class="scroll" href="#about">There's more below ↓</a>
 </section>
 
 <section id="about">
 <div class="card">
-<div class="eyebrow">the little things</div>
-<h2>A few things that make you, you</h2>
-<p>I wanted to make something that feels like you, so of course it needed a little blue, some lilies, cats, music, and a little room to dance.</p>
-<div class="likes">
-<div class="like"><span>✿</span><strong>Lilies</strong><br><small>pretty flowers for a pretty soul</small></div>
-<div class="like"><span>ฅ</span><strong>Cats</strong><br><small>tiny paws, big personality</small></div>
-<div class="like"><span>♫</span><strong>Music</strong><br><small>whatever song feels right</small></div>
-<div class="like"><span>♪</span><strong>Dancing</strong><br><small>just enjoy the moment</small></div>
-</div>
-<p>And honestly, getting to know you is my favorite part.</p>
+  <div class="eyebrow">the little things</div>
+  <h2>A few things that make you, you</h2>
+  <p>I wanted to make something that feels like you, so of course it needed a little blue, some lilies, cats, music, and a little room to dance.</p>
+
+  <div class="likes">
+    <div class="like"><span>✿</span><strong>Lilies</strong><br><small>pretty flowers for a pretty soul</small></div>
+    <div class="like"><span>ฅ</span><strong>Cats</strong><br><small>tiny paws, big personality</small></div>
+    <div class="like"><span>♫</span><strong>Music</strong><br><small>whatever song feels right</small></div>
+    <div class="like"><span>♪</span><strong>Dancing</strong><br><small>just enjoy the moment</small></div>
+  </div>
+
+  <p>And honestly, getting to know you is my favorite part.</p>
 </div>
 </section>
 
 <section id="why">
 <div class="card">
-<div class="eyebrow">from me to you</div>
-<h2>Why I like you</h2>
-<p>I like you because there’s something about you that makes me want to know you more. I love that you have your own things that make you happy, whether it’s music, dancing, or the little things you love.</p>
-<p>I like that you’re <em>you</em>. I don’t need a perfect reason or some huge speech. I just know I’m happy we started talking, and I want to keep making more memories with you.</p>
-<div class="likes">
-<div class="like"><span>♡</span><strong>Your vibe</strong><br><small>there’s something special about you</small></div>
-<div class="like"><span>♫</span><strong>Your passions</strong><br><small>I like seeing what makes you happy</small></div>
-<div class="like"><span>✧</span><strong>Getting to know you</strong><br><small>there’s still so much to learn about you</small></div>
-<div class="like"><span>🩵</span><strong>You being you</strong><br><small>that’s already enough for me</small></div>
-</div>
-<p>And that’s why I wanted to ask you something important…</p>
-<a class="scroll" href="#question">One last thing ↓</a>
+  <div class="eyebrow">from me to you</div>
+  <h2>Why I like you</h2>
+  <p>I like you because there’s something about you that makes me want to know you more. I love that you have your own things that make you happy, whether it’s music, dancing, or the little things you love.</p>
+  <p>I like that you’re <em>you</em>. I don’t need a perfect reason or some huge speech. I just know I’m happy we started talking, and I want to keep making more memories with you.</p>
+
+  <div class="likes">
+    <div class="like"><span>♡</span><strong>Your vibe</strong><br><small>there’s something special about you</small></div>
+    <div class="like"><span>♫</span><strong>Your passions</strong><br><small>I like seeing what makes you happy</small></div>
+    <div class="like"><span>✧</span><strong>Getting to know you</strong><br><small>there’s still so much to learn about you</small></div>
+    <div class="like"><span>🩵</span><strong>You being you</strong><br><small>that’s already enough for me</small></div>
+  </div>
+
+  <p>And that’s why I wanted to ask you something important…</p>
+  <a class="scroll" href="#question">One last thing ↓</a>
 </div>
 </section>
 
 <section id="question">
 <div class="card">
-<div class="eyebrow">okay so here's what i wanted to ask</div>
-<h2>Tracie...</h2>
-<p style="font-family:Georgia,serif;font-size:clamp(1.35rem,4vw,2rem)">Will you be my girlfriend?</p>
-<div class="heart">♡</div>
-<div class="buttons">
-<button class="yes" onclick="showAnswer(true)">Yes ♡</button>
-<button class="no" onclick="showAnswer(false)">No</button>
-</div>
-<div id="answer" role="status" aria-live="polite"></div>
+  <div class="eyebrow">okay so here's what i wanted to ask</div>
+  <h2>Tracie...</h2>
+
+  <!-- Added message before she answers -->
+  <p>
+    I know we just met yesterday, but you already make me happy.
+    I'm really glad we started talking, and I want to keep getting
+    to know you and see where things go with us. 🩵
+  </p>
+
+  <p style="font-family:Georgia,serif;font-size:clamp(1.35rem,4vw,2rem)">
+    Will you be my girlfriend?
+  </p>
+
+  <div class="heart">♡</div>
+
+  <div class="buttons">
+    <button class="yes" onclick="showAnswer(true)">Yes ♡</button>
+    <button class="no" onclick="showAnswer(false)">No</button>
+  </div>
+
+  <div id="answer" role="status" aria-live="polite"></div>
 </div>
 </section>
 </main>
 
 <footer>made with care, just for Tracie ♡</footer>
 
+<!-- Added full-screen celebration -->
+<div id="celebration" aria-hidden="true">
+  <div class="celebration-card">
+    <div class="celebration-heart">🩵</div>
+    <h2>YOU SAID YES! ♡</h2>
+    <p style="font-size:1.15rem">WAIT REALLY? 😭🩵</p>
+    <p>
+      I know we just met yesterday, but you already make me happy.
+      I'm really glad I met you, Tracie, and I'm excited to see where
+      things go with us.
+    </p>
+    <div class="celebration-name">Tracie + Me ♡</div>
+    <button class="close-celebration" onclick="closeCelebration()">
+      Keep this moment ♡
+    </button>
+  </div>
+</div>
+
 <script>
 function showAnswer(yes){
-  const answer=document.getElementById("answer");
-  answer.style.display="block";
+  const answer = document.getElementById("answer");
+
   if(yes){
-    answer.innerHTML="<h2 style='font-size:1.8rem'>WAIT REALLY? ♡</h2><p>This just made me so happy. I can’t wait to see where this goes with you.</p><div style='font-size:1.8rem'>♡ ♪ ♡</div>";
-  }else{
-    answer.innerHTML="<p>That’s okay, Tracie. Thank you for being honest with me. I still think you’re really special, and I respect how you feel. ♡</p>";
+    launchCelebration();
+    return;
   }
+
+  answer.style.display = "block";
+  answer.innerHTML =
+    "<p>That’s okay, Tracie. Thank you for being honest with me. I still think you’re really special, and I respect how you feel. ♡</p>";
+
   answer.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
+
+function launchCelebration(){
+  const screen = document.getElementById("celebration");
+
+  screen.classList.add("active");
+  screen.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+
+  const symbols = ["♡","♥","🩵","✧","♪","✿","✨"];
+
+  for(let i = 0; i < 85; i++){
+    const item = document.createElement("span");
+    item.className = "falling-item";
+    item.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+    item.style.left = Math.random() * 100 + "%";
+    item.style.fontSize = (16 + Math.random() * 23) + "px";
+    item.style.animationDuration = (3 + Math.random() * 5) + "s";
+    item.style.animationDelay = Math.random() * 1.5 + "s";
+    item.style.setProperty(
+      "--drift",
+      (Math.random() * 200 - 100) + "px"
+    );
+
+    screen.appendChild(item);
+
+    setTimeout(() => item.remove(), 10000);
+  }
+}
+
+function closeCelebration(){
+  const screen = document.getElementById("celebration");
+
+  screen.classList.remove("active");
+  screen.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+
+  screen.querySelectorAll(".falling-item").forEach(item => item.remove());
+}
+
+document.addEventListener("keydown", function(event){
+  if(event.key === "Escape"){
+    closeCelebration();
+  }
+});
 </script>
+
 </body>
 </html>
